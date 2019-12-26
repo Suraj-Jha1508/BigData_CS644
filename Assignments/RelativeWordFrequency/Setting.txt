@@ -1,0 +1,53 @@
+Input/Output of Mapper and Reducer:
+===================================
+
+Mapper
+------
+
+Input : Key  : some number <LongWritable>
+        Value: sentance <Text>
+		
+Output: Key  : * A_word or A_word B_word <Text> 
+        Value:1 <LongWritable>
+
+Combiner
+--------
+
+Input : Key  : * A_word or A_word B_word <Text> 
+        Value: 1 <LongWritable>
+		
+Output: Key  : * A_word or A_word B_word <Text>
+        Value: count of A_word OR count of pair:A_word and B_word <LongWritable>
+
+Reducer
+-------
+
+Input : Key  : * A_word or A_word B_word <Text>
+        Value: count of A_word OR count of pair:A_word and B_word <LongWritable>
+
+Output: Key  : A_word  B_word <Text> 
+        Value: relativeFrequency <Text>
+
+=====================================================================================================================
+
+Cluster Settings:
+=================
+
+Fully Distributed :
+-------------------
+Number of Instances =2 (One Master and One Slave)
+Number of Mappers =1
+Number of Reducers =1
+
+Pseudo distributed:
+-------------------
+Number of Instances =1 
+Number of Mappers =1
+Number of Reducers =1
+
+=======================================================================================================================
+
+Running Time
+For Pseudo distrubuted Mode=63 seconds
+For Full distributed Mode=51 seconds
+

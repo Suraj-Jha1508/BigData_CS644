@@ -1,0 +1,74 @@
+pseudo distributed mode:
+========================
+
+1. start dfs and yarn
+
+   start-dfs.sh
+   start-yarn.sh
+
+2. Compile the java program using below command:-
+
+   javac RelativeWordFrequency.java -cp $(hadoop classpath)
+
+3. Create a jar file:-
+   
+   jar -cvf RelativeWordFrequency.jar *.class
+
+4. Create a input directory in hdfs:-
+
+   hdfs dfs -mkdir /input_Assignment_5
+   
+5. Move the 100kText.txt to hdfs input directory:-
+   
+   hdfs dfs -put 100KWikiText.txt /input_Assignment_5
+
+6. Run the jar file:-
+
+   hadoop jar RelativeWordFrequency.jar RelativeWordFrequency  /input_Assignment_5 /output_Assignment_5
+   
+7. Get the output:-
+
+   hdfs dfs -get /output_Assignment_5
+
+8. Check the result:-
+
+   cat output_Assignment_5/part-r-00000
+
+
+Fuly distributed mode:
+=====================
+(Configure both Master and Slave VM and perform Below on master Node )
+[Note:- replication is 3] 
+
+1. start dfs and yarn
+
+   start-dfs.sh
+   start-yarn.sh
+
+2. Compile the java program using below command:-
+
+   javac RelativeWordFrequency.java -cp $(hadoop classpath)
+
+3. Create a jar file:-
+   
+   jar -cvf RelativeWordFrequency.jar *.class
+
+4. Create a input directory in hdfs:-
+
+   hdfs dfs -mkdir /input_Assignment_5
+   
+5. Move the 100kText.txt to hdfs input directory:-
+   
+   hdfs dfs -put 100KWikiText.txt /input_Assignment_5
+
+6. Run the jar file:-
+
+   hadoop jar RelativeWordFrequency.jar RelativeWordFrequency  /input_Assignment_5 /output_Assignment_5
+   
+7. Get the output:-
+
+   hdfs dfs -get /output_Assignment_5
+
+8. Check the result:-
+
+   cat output_Assignment_5/part-r-00000

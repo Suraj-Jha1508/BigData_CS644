@@ -1,0 +1,32 @@
+Algorithm Performed:-
+====================
+  
+Mapper:
+======
+Input : Key  : some number <LongWritable>
+        Value: sentance <Text>
+		
+Output: Key  : * A_word or A_word B_word <Text> 
+        Value:1 <LongWritable>
+	 
+Define: To filter words and pairs.
+	 
+Combiner:
+========
+Input : Key  : * A_word or A_word B_word <Text> 
+        Value: 1 <LongWritable>
+		
+Output: Key  : * A_word or A_word B_word <Text>
+        Value: count of A_word OR count of pair:A_word and B_word <LongWritable>
+	 
+Define: To count the number of words and pairs
+
+Reducer:
+========
+Input : Key  : * A_word or A_word B_word <Text>
+        Value: count of A_word OR count of pair:A_word and B_word <LongWritable>
+
+Output: Key  : A_word  B_word <Text> 
+        Value: relativeFrequency <Text>
+	 
+Define: To calculate Relative frequency and adding top 100 pair to a tree set of MyDataType(user Define datatype).
