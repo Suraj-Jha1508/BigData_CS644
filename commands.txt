@@ -1,0 +1,28 @@
+Commands file —
+
+Fully distributed Mode—
+
+First Format Namenode and Start Hadoop:
+   $bin/hdfs namenode -format
+   $sbin/start-dfs.sh
+   $sbin/start-yarn.sh
+
+Compile the programs and make jar package by below:
+   $javac <file_name.java> -cf $(Hadoop classpath)
+   $jar cvf <file_name.jar> *.class
+
+Copy the input data files to hdfs by making a input directory:
+    $bin/hdfs dfs  -mkdir  /input
+    $bin/hdfs dfs -put  <input_file> input/
+
+OOZIE start:
+   $OOZIE_HOME/bin/oozied.sh start
+
+Run the Programs:
+   oozie job -oozie http://localhost:11000/oozie -config job.properties -run
+
+Use the weburl to check Oozie status:-
+   http://ec2-54-226-58-142.compute-1.amazonaws.com:11000/oozie/
+
+Get Result:
+   $hdfs dfs -get <output_directory>
