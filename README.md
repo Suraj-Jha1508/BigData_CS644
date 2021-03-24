@@ -1,6 +1,5 @@
 # BigData_CS644
-
-Big Data Assignments and Project which i have done in my Masters at NJIT under Course CS644
+This Repository contain all Assignments and Project i completed during my Big Data Course at NJIT
 
 # Assignment 1:
 
