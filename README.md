@@ -1,7 +1,7 @@
 # BigData_CS644
 This Repository contain all Assignments and Project i completed during my Big Data Course at NJIT
 
-# Assignment 1:
+# Assignment 1: Set-up AWS EC2 Instance
 
 Take the following steps to set up VM instances through AWS for later use:
 
@@ -11,7 +11,7 @@ Create and launch two basic Amazon EC2 instances using any Linux AMI of your cho
 Assign an appropriate security group (with appropriate firewall settings) to allow network traffic between your two instances
 Configure "authorized_keys" for an ssh server and "known_hosts" for an ssh client on each VM instance to allow passphraseless ssh login between them
 
-# Assignment 2:
+# Assignment 2: Configure Hadoop in standalone Mode and develope a map-reduce Java program to find missing poker card
 
 In one of the VM instances you created in HW2, do the following:
 
@@ -25,7 +25,7 @@ Submission requirements: A zipped file that contains:
 3. The java programs of your MapReduce solution
 
 
-# Assignment 3:
+# Assignment 3: Configure HBase in Standalone Mode and store all missing Poker Cards in HBase
 
 On the VM instance where you installed Hadoop in HW3, do the following:
 
@@ -41,7 +41,7 @@ Submission requirements: A zipped file that contains
 4. A Screenshot showing that new records of all the missing Poker cards have been stored in HBase
 5. The modified java programs of your MapReduce solution integrated with HBase
 
-# Assignment 4:
+# Assignment 4: 
 
 ![image](https://user-images.githubusercontent.com/57008351/112390859-51978180-8ccd-11eb-8a00-8d6189d418bf.png)
 
