@@ -41,7 +41,10 @@ Submission requirements: A zipped file that contains
 4. A Screenshot showing that new records of all the missing Poker cards have been stored in HBase
 5. The modified java programs of your MapReduce solution integrated with HBase
 
-# Assignment 4: 
+# Assignment 4: Configure Apache Hadoop in a pseudo-distributed mode and fully-distributed mode, Develope a MapReduce-based approach in your Hadoop system to compute the relative frequencies of each word, 
 
 ![image](https://user-images.githubusercontent.com/57008351/112390859-51978180-8ccd-11eb-8a00-8d6189d418bf.png)
+
+# Project: develop an Oozie workflow to process and analyze a large volume of flight
+data
 
